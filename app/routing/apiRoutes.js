@@ -24,46 +24,48 @@ module.exports = function(app){
 	// ---------------------------------------------------------------------------
 
 	app.post("/api/friends", function(req, res){
-        console.log("This is the req.body from apiroutes" + req.body)
+        // console.log("This is the req.body from apiroutes" + req.body)
         // Note the code here. Our "server" will respond to requests and 
         //let users know their most compatible friend.
         // It will do this by sending out the value "true" 
         var newPerson = req.body; 
         var bestMatch = 1000;
-        var compatiblePerson; 
+        var compatiblePerson;
+        var compatiblePersonPhoto; 
         for (var i = 0; i < friendData.length; i++) {
             var difference = compareFriends(newPerson.scores, friendData[i].scores);
-            console.log("The new person and " + i + "are this difference:" + difference);
+            console.log("The new person and " + friendData[i].name + " have a difference of: " + difference);
             if (difference < bestMatch) {
-                bestMatch = difference; 
-                compatiblePerson = friendData[i].name; 
-                
+                bestMatch = difference;
+                compatiblePerson = friendData[i].name;
+                compatiblePersonPhoto = friendData[i].photo;
             }
-            console.log("This is your most compatible match: " + compatiblePerson);
+            console.log("Your most compatible match is: " + compatiblePerson);
         }
 
 
         friendData.push(req.body);
         // console.log("This is after push:" + friendData);
-    
+
+        res.json({status: 'OK', compatiblePerson: compatiblePerson, compatiblePersonPhoto: compatiblePersonPhoto});
 	});
 }
 
 function compareFriends (a,b) {
-    console.log(a);
-    console.log(b);
-    var totalDifference = 0; 
+    // console.log(a);  Log the array
+    // console.log(b);  Log the second array
+    var totalDifference = 0;
 
     for(var i= 0; i < a.length; i++){
         comparisonNumber = difference (a[i],b[i]);
-        console.log("The difference of" + i + "is" + comparisonNumber );
+        // console.log("The difference of " + i + " is " + comparisonNumber );
         totalDifference = totalDifference + comparisonNumber;
-        console.log(totalDifference);
+        // console.log(totalDifference);
     }
-    console.log(totalDifference);
+    // console.log(totalDifference);
     return totalDifference
 };
 
 function difference(a, b) {
     return Math.abs(a - b);
-}
+};

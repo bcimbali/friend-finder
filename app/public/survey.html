@@ -206,6 +206,7 @@
 	// Our api recognizes the route (/api/friendData)... and then runs the associated code (found in api-routes.js).
 	// In this case the associated code "saves" the data to the friends.js file or waitinglist-data.js file
 	$(".submit").on("click", function(){
+        // event.preventDefault();
 		// Here we grab the form elements
 		var newFriend = {
 			name: $('#name').val().trim(),
@@ -224,7 +225,7 @@
             ]
             
         };
-        console.log(newFriend);
+        // console.log(newFriend);
 
 
 	
@@ -238,57 +239,18 @@
 		// Here we get the location of the root page.
         // We use this instead of explicitly saying the URL is localhost:3001 
         //because the url will change when we deploy.
-        var currentURL = window.location.origin;
-	    
+        var currentURL = window.location.origin;   
+        console.log('New friend is:');
         console.log(newFriend);
+
+        var currentURL = window.location.origin;
     
-
-    function doEverything() {
-        $.ajax({url: currentURL + "/api/friends", method: "GET"})
-			.done(function(friends) {
-            console.log(friends);
-                // var newPerson = req.body; 
-                var bestMatch = 1000;
-                var compatiblePerson; 
-            for (var i = 0; i < friends.length; i++) {
-                var difference = compareFriends(newFriend.scores, friends[i].scores);
-                console.log("The new person and " + i + "are this difference:" + difference);
-                if (difference < bestMatch) {
-                    bestMatch = difference; 
-                    compatiblePerson = friends[i].name; 
-                }
-                console.log("This is your most compatible match " + compatiblePerson);
-            }
-        // friendData.push(req.body);
-                        
-        });
-    };
-
-    function compareFriends (a,b) {
-        console.log(a);
-        console.log(b);
-        var totalDifference = 0; 
-        for(var i= 0; i < a.length; i++){
-            comparisonNumber = difference (a[i],b[i]);
-            console.log("The difference of" + i + "is" + comparisonNumber );
-            totalDifference = totalDifference + comparisonNumber;
-            console.log(totalDifference);
-        }
-        console.log(totalDifference);
-        return totalDifference
-    };
-
-    function difference(a, b) {
-        return Math.abs(a - b);
-    }
-    doEverything();
-
-    $.post( currentURL + "/api/friends", newFriend,
+        $.post( currentURL + "/api/friends", newFriend,
 	    function(data){
-            console.log("This is from survey html data" + data);
+            console.log("This is from survey html data:");
+            console.log(data);
 
-
-	    	// Clear the form when submitting
+	    // Clear the form when submitting
     	$('#name').val("");
 			$('#photo').val("");
 			$('#inputGroupSelect01').val("");
@@ -300,16 +262,8 @@
             $('#inputGroupSelect07').val("");
             $('#inputGroupSelect08').val("");
             $('#inputGroupSelect09').val("");
-            $('#inputGroupSelect10').val("");
-	    
+            $('#inputGroupSelect10').val("");  
         });
-
-
-
-
-
+        // friendData.push(req.body);           
 });
-
-
-
 </script>

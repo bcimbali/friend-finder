@@ -31,8 +31,9 @@ app.use(express.static('public'));
 
 //This is for the html pages and routes
 
-require('./app/routing/htmlRoutes.js')(app);
 require('./app/routing/apiRoutes.js')(app); 
+require('./app/routing/htmlRoutes.js')(app);
+
 
 //Listener
 app.listen(PORT, function() {

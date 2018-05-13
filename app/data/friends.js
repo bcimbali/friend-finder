@@ -32,9 +32,6 @@ var friends = [{
         3,
         1
       ],
-  }]
-
-
-  
+}]
 
 module.exports = friends; 

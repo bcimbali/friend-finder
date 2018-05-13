@@ -4,7 +4,7 @@
 
 var friends = [{
     name:"Guino",
-    photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahV-U1ekrN8rkc1IY5aLSv7dERLriYBWh6runWlZ66-g0OPqoCQ",
     scores:[
         5,
         1,
@@ -19,7 +19,7 @@ var friends = [{
       ],
   }, {
     name:"Foxes",
-    photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Caterina_fake.jpg/412px-Caterina_fake.jpg",
+    photo:"https://images.bonanzastatic.com/afu/images/cd1c/b053/1e0d_5488151424/__57.jpg",
     scores:[
         5,
         2,

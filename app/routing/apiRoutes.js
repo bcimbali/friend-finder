@@ -43,7 +43,6 @@ module.exports = function(app){
             console.log("Your most compatible match is: " + compatiblePerson);
         }
 
-
         friendData.push(req.body);
         // console.log("This is after push:" + friendData);
 
@@ -52,8 +51,10 @@ module.exports = function(app){
 }
 
 function compareFriends (a,b) {
-    // console.log(a);  Log the array
-    // console.log(b);  Log the second array
+    console.log('new person scores:');
+    console.log(a); 
+    console.log('next person scores: ');
+    console.log(b);
     var totalDifference = 0;
 
     for(var i= 0; i < a.length; i++){

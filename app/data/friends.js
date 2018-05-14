@@ -3,8 +3,8 @@
 //can make sql call and store result into an array of objects
 
 var friends = [{
-    name:"Guino",
-    photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahV-U1ekrN8rkc1IY5aLSv7dERLriYBWh6runWlZ66-g0OPqoCQ",
+    name:"Greg",
+    photo:"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     scores:[
         5,
         1,
@@ -18,14 +18,142 @@ var friends = [{
         1
       ],
   }, {
-    name:"Foxes",
-    photo:"https://images.bonanzastatic.com/afu/images/cd1c/b053/1e0d_5488151424/__57.jpg",
+    name:"Kayla",
+    photo:"https://images.pexels.com/photos/324658/pexels-photo-324658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     scores:[
         5,
         2,
         3,
         4,
         5,
+        1,
+        2,
+        5,
+        3,
+        1
+      ],
+},
+{
+    name:"Sun",
+    photo:"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        1,
+        1,
+        2,
+        4,
+        3,
+        1,
+        2,
+        4,
+        3,
+        1
+      ],
+},
+{
+    name:"Courtney",
+    photo:"https://images.pexels.com/photos/818819/pexels-photo-818819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        3,
+        3,
+        3,
+        4,
+        3,
+        2,
+        2,
+        4,
+        3,
+        2
+      ],
+},
+{
+    name:"Ann",
+    photo:"https://images.pexels.com/photos/253758/pexels-photo-253758.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        2,
+        3,
+        3,
+        5,
+        3,
+        1,
+        5,
+        1,
+        4,
+        2
+      ],
+},
+{
+    name:"Mary",
+    photo:"https://images.pexels.com/photos/773371/pexels-photo-773371.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        4,
+        2,
+        4,
+        2,
+        3,
+        2,
+        4,
+        2,
+        4,
+        2
+      ],
+},
+{
+    name:"Ray",
+    photo:"https://images.pexels.com/photos/307847/pexels-photo-307847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1,
+        1,
+        4,
+        5
+      ],
+},
+{
+    name:"Logan",
+    photo:"https://images.pexels.com/photos/462680/pexels-photo-462680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        5,
+        2,
+        1,
+        4,
+        5,
+        5,
+        2,
+        4,
+        2,
+        1
+      ],
+},
+{
+    name:"Emily",
+    photo:"https://images.pexels.com/photos/875862/pexels-photo-875862.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        5,
+        4,
+        4,
+        4,
+        5,
+        5,
+        2,
+        4,
+        3,
+        4
+      ],
+},
+{
+    name:"Remy",
+    photo:"https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    scores:[
+        3,
+        2,
+        4,
+        4,
+        1,
         1,
         2,
         5,
